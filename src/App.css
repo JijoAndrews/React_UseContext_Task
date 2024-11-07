@@ -1,9 +1,25 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
 /* 
 .logo {
   height: 6em;
@@ -33,10 +49,39 @@
   }
 } */
 
-.card {
-  padding: 2em;
-}
+
 
 .read-the-docs {
   color: #888;
+}
+
+.topsection
+{
+  margin: auto;
+  /* padding: 10px; */
+  width:100%;
+}
+
+.headersection
+{
+  margin: auto;
+  /* padding: 10px; */
+  width:100%;
+}
+
+.shopcontainer
+{
+  width: 100%;
+  margin: auto;
+}
+
+.cardsection
+{
+  display: col;
+}
+
+.cardapperance
+{
+ top: 0.5rem; 
+ right: 0.5rem;
 }
