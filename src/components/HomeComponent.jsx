@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import { CardComponent } from './CardComponent';
 import { NavbarComponent } from './NavbarComponent';
+import { Footercomponent } from './Footercomponent';
 
 
 export const contextdata =createContext();
@@ -68,6 +69,7 @@ export const HomeComponent = () => {
         <NavbarComponent/>
         <CardComponent data={spliteddata}/>
         </contextdata.Provider>
+        <Footercomponent/>
     </div>
     )
 }
