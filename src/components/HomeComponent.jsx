@@ -2,7 +2,6 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import { CardComponent } from './CardComponent';
 import { NavbarComponent } from './NavbarComponent';
-import { Coverimagecomponent } from './Coverimagecomponent';
 
 
 export const contextdata =createContext();
@@ -65,9 +64,8 @@ export const HomeComponent = () => {
   return (
     <div className='shopcontainer'>
             
-        <NavbarComponent/>
-        <Coverimagecomponent/>
         <contextdata.Provider value={{cardcount,setcardCount}}>
+        <NavbarComponent/>
         <CardComponent data={spliteddata}/>
         </contextdata.Provider>
     </div>

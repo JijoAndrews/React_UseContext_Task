@@ -1,10 +1,26 @@
 import React, { useContext } from 'react'
 import { contextdata } from './HomeComponent'
+import { Coverimagecomponent } from './Coverimagecomponent'
 
 
 export const NavbarComponent = () => {
+
+    const {cardcount,setcardCount}=useContext(contextdata)
+
+    function totalcountstatus()
+    {
+        const val=[...cardcount]
+        const intialval=0
+        const totalsum=val.map((e)=>e.count);
+        const fv=totalsum.reduce((a,c)=>a+c,intialval,);
+        return fv
+    }
+
+    
+
   return (
-    <div className='topsection'>
+    <>
+     <div className='topsection'>
         <nav className="navbar navbar-expand-sm navbar-light bg-light" aria-label="Third navbar example">
             <div className="container px-4 px-lg-5">
                 <a className="navbar-brand" href="#">Shopify</a>
@@ -36,7 +52,7 @@ export const NavbarComponent = () => {
                             <button className="btn btn-outline-dark" type="submit">
                                 <i className="bi-cart-fill me-1"></i>
                                 Cart
-                                <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                                <span className="badge bg-dark text-white ms-1 rounded-pill">{totalcountstatus()}</span>
                             </button>
                 </form>
 
@@ -44,5 +60,8 @@ export const NavbarComponent = () => {
             </div>
         </nav> 
     </div>
+    <Coverimagecomponent/>
+    </>
+   
 )
 }
