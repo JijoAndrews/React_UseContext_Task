@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -11,13 +9,19 @@ import { HomeComponent } from './components/HomeComponent'
 import carddataLoader from "./loaders/carddataLoader"
 
 import './App.css'
+import { CartPageComponent } from './components/CartPageComponent'
 
 
 const router=createBrowserRouter([
   {
-    path:'/',
+    path:"/",
     element: <HomeComponent/>,
-    loader: carddataLoader
+    loader: carddataLoader,
+  },
+  
+  { path:'/cartpage',
+    element: <CartPageComponent/>,
+    loader: carddataLoader,
   }
 ],
  { future: {

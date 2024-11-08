@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { Outlet, useLoaderData } from 'react-router-dom'
 import { CardComponent } from './CardComponent';
 import { NavbarComponent } from './NavbarComponent';
 import { Footercomponent } from './Footercomponent';
@@ -64,7 +64,6 @@ export const HomeComponent = () => {
 
   return (
     <div className='shopcontainer'>
-            
         <contextdata.Provider value={{cardcount,setcardCount}}>
         <NavbarComponent/>
         <CardComponent data={spliteddata}/>
