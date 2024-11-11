@@ -17,7 +17,6 @@ export const NavbarComponent = () => {
         return fv
     }
 
-    
 
   return (
     <>

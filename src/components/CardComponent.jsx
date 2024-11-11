@@ -104,6 +104,7 @@ export const CardComponent = ({data}) => {
             )
             
     }
+    
     const cards=data.map((e,index)=>{return cardsetup(e)})
     
     return(

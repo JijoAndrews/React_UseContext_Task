@@ -31,7 +31,7 @@ export const HomeComponent = () => {
     const productdata=useLoaderData();
     const spliteddata=[...productdata.products];
 
-    useEffect(()=>{console.log("cardcount:",cardcount)},[cardcount])
+    useEffect(()=>{},[cardcount])
 
   return (
     <div className='shopcontainer'>

@@ -139,7 +139,7 @@
 {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(33, 37, 41);
   padding: 5px;
   margin: 5px;
 }
@@ -273,7 +273,7 @@ example {
 
   font-size: small;
   text-align: left;
-  color: aqua;
+  color: rgb(255, 255, 255);
 }
 
 .clickbutton {
@@ -302,7 +302,7 @@ h4{
 {
   display: grid;
   justify-content: center;
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(33, 37, 41);
   padding: 5px;
   margin: 5px;
   justify-items: center;
@@ -345,7 +345,7 @@ h4{
 
   font-size: small;
   text-align: center;
-  color: aqua;
+  color: rgb(255, 255, 255);
 }
   .example img {
    min-width: 200px;

@@ -3,7 +3,6 @@ import { contextdata } from './HomeComponent'
 import { useLoaderData } from 'react-router-dom';
 
 
-
 export const JustCartPageComponet = () => {
     let tcount=0;
     const productdata=useLoaderData();
@@ -115,9 +114,11 @@ export const JustCartPageComponet = () => {
                     <div className="countbox">
                         <div className="headtext"> 
                                 <div className='countcontrol'>
-                                    <button type="button" className="clickbutton" onClick={()=>{removeelementtocart(element.id)}}>{"-"}</button>
+                                <i className="bi bi-dash-circle"  onClick={()=>{removeelementtocart(element.id)}}></i>
+                                    {/* <button type="button" className="clickbutton" onClick={()=>{removeelementtocart(element.id)}}>{"-"}</button> */}
                                     <h1 className='ptext'>{`${singlecountstatus(element.id)}`}</h1>
-                                    <button type="button" className="clickbutton" onClick={()=>{addelementtocart(element.id)}}>{"+"}</button>
+                                    <i className="bi bi-plus-circle" onClick={()=>{addelementtocart(element.id)}}></i>
+                                    {/* <button type="button" className="clickbutton" onClick={()=>{addelementtocart(element.id)}}>{"+"}</button> */}
                                 </div>
                             </div>
     
