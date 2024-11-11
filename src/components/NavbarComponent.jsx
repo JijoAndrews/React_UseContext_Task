@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { contextdata } from './HomeComponent'
 import { Coverimagecomponent } from './Coverimagecomponent'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 export const NavbarComponent = () => {
@@ -31,7 +32,8 @@ export const NavbarComponent = () => {
                 <div className="collapse navbar-collapse" id="navbarsExample03">
                 <ul className="navbar-nav me-auto mb-2 mb-sm-0">
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                    {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
+                    <Link to='/' className='nav-link active' aria-current="page">Hopme</Link>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link" href="#">About</a>

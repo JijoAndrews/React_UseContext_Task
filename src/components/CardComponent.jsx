@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { contextdata } from './HomeComponent'
 
+import productdata from '../loaders/curcartdata'
 
 
 
@@ -13,7 +14,7 @@ export const CardComponent = ({data}) => {
     {
         let val=[...cardcount]
         val=val.filter((element)=>element.id===id)
-        console.log("status val:",val)
+        // console.log("status val:",val)
         return val[0].removebtn
     }
 
@@ -38,8 +39,9 @@ export const CardComponent = ({data}) => {
 
         })
         
+        productdata.productdata=[...values];
         setcardCount(values);
-        console.log(values)
+        console.log(values,productdata.productdata)
     }
     
     const removeelementtocart=(id)=>{

@@ -2,9 +2,8 @@ import axios from "axios";
 
 
 const carddataLoader=async () => {
-    const productdata= await axios.get("/datas/productdata.json");
+    const productdata= await axios.get("/productdata.json");
     return  productdata.data;
-
 }
 
 

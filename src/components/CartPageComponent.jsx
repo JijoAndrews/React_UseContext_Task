@@ -3,16 +3,26 @@ import { contextdata } from './HomeComponent'
 import { useLoaderData } from 'react-router-dom';
 import { NavbarComponent } from './NavbarComponent';
 import { CartNavBarComponent } from './CartNavBarComponent';
+import { Footercomponent } from './Footercomponent';
 
 
 
 export const CartPageComponent = () => {
+
+    const productdata=useLoaderData();
+    // const loaderdat=[...productdata];
+    const spliteddata=[...productdata.products];
+
+    const {cardcount,setcardCount} = useContext(contextdata)
+    
+    // const itemsincart=cardcount.filter((element)=>element.count>0).map((e)=>{e.id,e.count})
+
+    console.log("card status:",cardcount);
+
   return (
     <div className='shopcontainer'>
-        <CartNavBarComponent/>
+        {/* <CartNavBarComponent/> */}
         <div className='card'>
-
-
             <div className='mycartcontainer'>
                     <div className='iconcontainer'>
                     <div className='testimage'>
@@ -79,7 +89,7 @@ export const CartPageComponent = () => {
                 </div>
             </div>
         </div>
-
+        {/* <Footercomponent/> */}
     </div>
    
 )

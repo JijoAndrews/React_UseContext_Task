@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HomeComponent } from './components/HomeComponent'
 
 import carddataLoader from "./loaders/carddataLoader"
+import productdata from './loaders/curcartdata'
 
 import './App.css'
 import { CartPageComponent } from './components/CartPageComponent'
@@ -16,12 +17,7 @@ const router=createBrowserRouter([
   {
     path:"/",
     element: <HomeComponent/>,
-    loader: carddataLoader,
-  },
-  
-  { path:'/cartpage',
-    element: <CartPageComponent/>,
-    loader: carddataLoader,
+    loader: carddataLoader
   }
 ],
  { future: {
@@ -36,7 +32,6 @@ const router=createBrowserRouter([
 )
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <RouterProvider router={router} future={{v7_startTransition: true,}} />

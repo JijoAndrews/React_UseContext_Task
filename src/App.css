@@ -77,6 +77,7 @@
 }
 
 .card{
+  margin: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -138,7 +139,7 @@
 {
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: rgb(61, 61, 61);
   padding: 5px;
   margin: 5px;
 }
@@ -169,6 +170,34 @@
   justify-content: center;
 }
 
+.testcartimage{
+
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+
+example {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.example img {
+  width: 30vw;
+  height: 30vw;
+}
+
+.example-cover img {
+  object-fit: cover;
+}
+
+.example-contain img {
+  object-fit: contain;
+}
+
+
 .headtext{
   display: grid;
   justify-content: center;
@@ -177,10 +206,17 @@
   color: aliceblue;
 }
 
+.headingtext{
+    text-align: start;    
+    text-wrap: wrap;
+ }
+ 
 
 .countset
 {
   display: grid;
+  background-color: rgba(87, 87, 87, 0.63);
+  border-radius: 10px;
   padding: 5px;
   margin: 5px;
 }
@@ -233,6 +269,32 @@
   justify-content: space-between;
 }
 
+.discriptext{
+
+  font-size: small;
+  text-align: left;
+  color: aqua;
+}
+
+.clickbutton {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  cursor: pointer;
+ 
+}
+
+h4{
+  text-wrap: none;
+}
+
 @media screen and (max-width:800px)
 {
 
@@ -240,30 +302,64 @@
 {
   display: grid;
   justify-content: center;
-  background-color: black;
+  background-color: rgb(61, 61, 61);
   padding: 5px;
   margin: 5px;
+  justify-items: center;
 }
 
+.imageclass{
+  padding: 0px;
+}
 
   .iconcontainer
   {
     display: grid;
     justify-content: center;
     padding: 10px;
+    /* width: fit-content; */
+    
   }
   .countset
   {
     display: grid;
     justify-content: center;
-    background-color: black;
+    background-color: rgba(87, 87, 87, 0.63);
+    border-radius: 10px;
     padding: 5px;
     margin: 5px;
-  
+    align-items: center;
+    width: fit-content;
   }
   
   .headtext{
     justify-items: normal;
   }
+
+  .headingtext{
+    text-align: center;    
+    text-wrap: wrap;
+ }
+  
+ .discriptext{
+
+  font-size: small;
+  text-align: center;
+  color: aqua;
+}
+  .example img {
+   min-width: 200px;
+   min-height: 250px;
+  }
+  
+  .example-cover img {
+    object-fit: contain;
+  }
+  
+  .example-contain img {
+    object-fit: fill;
+
+  }
+  
   
 }
